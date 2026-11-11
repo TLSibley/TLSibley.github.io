@@ -17,7 +17,7 @@ This is my professional portfolio. The live site is **https://YOUR-USERNAME.gith
 
 ## Filling it in
 
-Search each file for **`[EDIT`**. Those are the only spots that still need your input (mostly the case study details).
+Projects marked "Case study coming soon" have no write-up yet. When one is ready, add a page to `projects/` and swap the "coming soon" label for a link.
 
 | What | Where |
 |---|---|
@@ -29,7 +29,7 @@ To edit on GitHub: open the file, click the ✏️ pencil icon, make changes, th
 
 ## Adding a new project
 
-1. Copy any file in `projects/` and rename it, e.g. `projects/ai-risk-register.md`.
+1. Copy `projects/ai-strategy-brief.md` and rename it, e.g. `projects/ai-risk-register.md`.
 2. In `index.html`, copy one `<article class="card">…</article>` block and change its text and link (`projects/ai-risk-register.html`. Note the link ends in **.html**, not .md).
 3. Change a project's tag from `wip` to `done` when it's finished.
 

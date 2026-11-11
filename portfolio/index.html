@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomeeka L. Sibley | Director of AI Governance</title>
+<meta name="description" content="Portfolio of Tomeeka L. Sibley: cybersecurity and national security executive with 25+ years of leadership, focused on enterprise AI governance and cyber risk.">
+<style>
+  :root {
+    --ink: #14213d;
+    --ink-soft: #3a4560;
+    --brass: #a8762c;
+    --brass-light: #f3e7d3;
+    --paper: #f8f6f1;
+    --card: #ffffff;
+    --line: #e2ddd2;
+    --ok: #2f6b4f;
+    --ok-bg: #e3f0e9;
+    --wip: #8a5a12;
+    --wip-bg: #fbefd9;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 17px; }
+  a { color: var(--ink); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 22px; }
+
+  /* Nav */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(248,246,241,.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; text-decoration: none; letter-spacing: .01em; }
+  .brand span { color: var(--brass); }
+  .links { display: flex; gap: 22px; list-style: none; overflow-x: auto; }
+  .links a { text-decoration: none; font-size: .9rem; color: var(--ink-soft); white-space: nowrap; }
+  .links a:hover { color: var(--brass); }
+
+  /* Hero */
+  header.hero { padding: 84px 0 68px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); font-weight: 600; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.3rem, 5.5vw, 3.6rem); line-height: 1.08; margin: 14px 0 20px; font-weight: 700; }
+  .hero p.lead { font-size: 1.18rem; color: var(--ink-soft); max-width: 640px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: .95rem; border: 1.5px solid var(--ink); }
+  .btn.primary { background: var(--ink); color: #fff; }
+  .btn.primary:hover { background: var(--brass); border-color: var(--brass); }
+  .btn.ghost:hover { border-color: var(--brass); color: var(--brass); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; margin-top: 56px; border-top: 1px solid var(--line); }
+  .stat { padding: 20px 18px 0 0; }
+  .stat b { display: block; font-family: var(--serif); font-size: 2rem; line-height: 1.1; }
+  .stat small { color: var(--ink-soft); font-size: .85rem; }
+
+  /* Sections */
+  section { padding: 76px 0; border-bottom: 1px solid var(--line); }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 34px; }
+  .sec-head .num { font-family: var(--serif); color: var(--brass); font-size: 1rem; }
+  h2 { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.3rem); font-weight: 700; }
+  h3 { font-size: 1.08rem; line-height: 1.35; }
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; }
+  .about-grid p + p { margin-top: 16px; }
+  .focus { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 24px; }
+  .focus h3 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
+  .focus ul { list-style: none; }
+  .focus li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .focus li:last-child { border-bottom: 0; }
+
+  /* Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color .15s, transform .15s; }
+  .card:hover { border-color: var(--brass); transform: translateY(-2px); }
+  .tag { align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 9px; border-radius: 3px; }
+  .tag.done { background: var(--ok-bg); color: var(--ok); }
+  .tag.wip { background: var(--wip-bg); color: var(--wip); }
+  .card p { font-size: .94rem; color: var(--ink-soft); }
+  .card dl { font-size: .86rem; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+  .card dt { font-weight: 700; color: var(--ink); }
+  .card dd { color: var(--ink-soft); }
+  .card .more { margin-top: auto; font-size: .9rem; font-weight: 600; color: var(--brass); text-decoration: none; }
+  .card .more:hover { text-decoration: underline; }
+  .card div .more { margin-top: 0; }
+  .soon { margin-top: auto; font-size: .85rem; font-weight: 600; color: #8a8f9c; font-style: italic; }
+
+  /* Credentials */
+  .cred-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .cred-cols h3 { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; }
+  .cred { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .cred strong { display: block; }
+  .cred small { color: var(--ink-soft); font-size: .86rem; }
+  .verify { flex-shrink: 0; font-size: .82rem; font-weight: 700; color: var(--ok); text-decoration: none; border: 1.5px solid var(--ok); padding: 5px 10px; border-radius: 3px; }
+  .verify:hover { background: var(--ok); color: #fff; }
+  .date { flex-shrink: 0; font-size: .82rem; color: var(--wip); font-weight: 600; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .t-item { position: relative; padding-bottom: 30px; }
+  .t-item::before { content: ""; position: absolute; left: -28px; top: 7px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 2px solid var(--brass); }
+  .t-item .when { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--brass); font-weight: 600; }
+  .t-item p { color: var(--ink-soft); font-size: .95rem; margin-top: 4px; max-width: 720px; }
+  .service { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 18px; }
+  .service .card { padding: 20px; }
+
+  /* Contact */
+  #contact { background: var(--ink); color: #fff; border-bottom: 0; }
+  #contact h2, #contact a { color: #fff; }
+  #contact .num { color: #e2b56b; }
+  #contact p { color: #c9cfdc; max-width: 560px; }
+  #contact .btn { border-color: #fff; }
+  #contact .btn.primary { background: #fff; color: var(--ink); }
+  #contact .btn.primary:hover { background: #e2b56b; border-color: #e2b56b; }
+  #contact .btn.ghost:hover { color: #e2b56b; border-color: #e2b56b; }
+  footer { background: var(--ink); color: #8f98ad; font-size: .82rem; padding: 0 0 36px; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .about-grid, .cred-cols { grid-template-columns: 1fr; gap: 28px; }
+    .links { gap: 16px; }
+    header.hero { padding: 56px 0 48px; }
+    section { padding: 56px 0; }
+  }
+  @media (max-width: 520px) { .links li.hide-sm { display: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">T. L. Sibley<span>.</span></a>
+    <ul class="links">
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li class="hide-sm"><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">AI Governance · Cyber Risk · National Security</div>
+    <h1>Tomeeka L. Sibley</h1>
+    <p class="lead">I'm a cybersecurity and national security executive with 25+ years of leadership, now focused on enterprise AI governance. I help organizations adopt AI responsibly through clear policy, managed risk and frameworks like the NIST AI RMF, NIST CSF 2.0, ISO/IEC 42001 and the EU AI Act.</p>
+    <div class="cta">
+      <a class="btn primary" href="#portfolio">View my work</a>
+      <a class="btn ghost" href="documents/Tomeeka-Sibley-Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>25+</b><small>years of leadership</small></div>
+      <div class="stat"><b>$900M+</b><small>security portfolios managed</small></div>
+      <div class="stat"><b>3</b><small>master's degrees</small></div>
+      <div class="stat"><b>6</b><small>credentials you can verify online</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">01</span><h2>About</h2></div>
+    <div class="about-grid">
+      <div>
+        <p>I served 25 years in the U.S. Army and with the Defense Intelligence Agency. I was the first military officer selected to lead DIA's Pan-American Regional Cyber/C4I Branch. I directed a 40-person multinational cyber branch and briefed the President, Secretary of Defense and Joint Chiefs of Staff on foreign cyber threats. I also managed more than $900M in international security-assistance and defense-sales portfolios at the U.S. Embassy in Iraq and the Office of Security Cooperation-Iraq.</p>
+        <p>Today I'm putting that experience to work in enterprise AI governance. I build governance frameworks, test AI controls in my own lab, and complete applied AI training at MIT Professional Education and Columbia University. This portfolio shows that work so you can see how I approach real governance problems.</p>
+      </div>
+      <aside class="focus">
+        <h3>Areas of focus</h3>
+        <ul>
+          <li>AI governance strategy &amp; responsible AI</li>
+          <li>AI risk management (NIST AI RMF)</li>
+          <li>Enterprise cyber risk &amp; GRC</li>
+          <li>Zero Trust &amp; security operations</li>
+          <li>Board-level &amp; executive communication</li>
+          <li>Organizational transformation</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">02</span><h2>Portfolio</h2></div>
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag done">Completed · Oct 2026</span>
+        <h3>Governed Speed: AI Strategy Brief</h3>
+        <p>My MIT capstone. It's a 15-page AI governance strategy for a modeled 210-person cyber defense branch: a readiness assessment, a scored opportunity map, and a three-phase roadmap with evidence gates that keep accountable humans in control.</p>
+        <dl><dt>Program</dt><dd>MIT Applied AI for Digital Transformation</dd><dt>Frameworks</dt><dd>NIST AI RMF, NIST AI 600-1, RMF, ADKAR</dd><dt>Impact</dt><dd>~1,920 hrs/yr freed (modeled), 3 evidence gates</dd></dl>
+        <div style="margin-top:auto;display:flex;gap:18px;flex-wrap:wrap">
+          <a class="more" href="documents/Sibley-AI-Strategy-Brief.pdf" target="_blank" rel="noopener">Read the brief (PDF) →</a>
+          <a class="more" href="projects/ai-strategy-brief.html">Case study →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">2024 – Present</span>
+        <h3>National AI Governance Assessment Framework</h3>
+        <p>ROE-AI (Rules of Engagement for AI) is my own framework for measuring an organization's AI governance maturity, operational risk, regulatory compliance and executive oversight. It is being developed across four industry scenarios.</p>
+        <dl><dt>Type</dt><dd>Independent initiative</dd><dt>Frameworks</dt><dd>NIST AI RMF, NIST CSF 2.0, NIST SP 800-53/171, CMMC, Zero Trust</dd></dl>
+        <span class="soon">Case study coming soon</span>
+      </article>
+
+      <article class="card">
+        <span class="tag done">Tests passed · Nov 2026</span>
+        <h3>Enterprise AI Governance &amp; Cybersecurity Lab</h3>
+        <p>A Proxmox lab built to answer one question: can a team deploy, monitor and recover an AI service within approved risk limits? The first validation run passed both controls: human approval for a sensitive AI action, and blocking, containing and recovering from an unapproved data transfer.</p>
+        <dl><dt>Type</dt><dd>Founder, active build</dd><dt>Frameworks</dt><dd>NIST AI RMF, ISO/IEC 42001, Zero Trust</dd></dl>
+        <div style="margin-top:auto;display:flex;gap:18px;flex-wrap:wrap">
+          <a class="more" href="documents/Sibley-Enterprise-AI-Lab-Case-Study.pdf" target="_blank" rel="noopener">Read the case study (PDF) →</a>
+          <a class="more" href="projects/enterprise-ai-lab.html">Summary →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">In progress</span>
+        <h3>Agentic AI for Organizational Transformation</h3>
+        <p>Coursework on using AI agents to transform how organizations work, with a focus on keeping autonomous agents under accountable human oversight.</p>
+        <dl><dt>Program</dt><dd>MIT Applied Agentic AI for Organizational Transformation</dd><dt>Skills</dt><dd>Agentic AI, oversight controls, change management</dd></dl>
+        <span class="soon">Case study coming soon</span>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">In progress</span>
+        <h3>CISSP Study Coach</h3>
+        <p>An AI-powered study tool for the CISSP exam, built with Claude. It shows how I scope, direct and govern an AI build from idea to working product.</p>
+        <dl><dt>Type</dt><dd>Applied AI build</dd><dt>Skills</dt><dd>AI product direction, security domains</dd></dl>
+        <span class="soon">Case study coming soon</span>
+      </article>
+
+      <article class="card">
+        <span class="tag wip">In progress</span>
+        <h3>Georgia Family Resource App</h3>
+        <p>An app that gathers services for special needs families across Georgia in one place. It's built with privacy and accessibility in mind from the start.</p>
+        <dl><dt>Type</dt><dd>Community project</dd><dt>Skills</dt><dd>Privacy by design, accessibility, stakeholder needs</dd></dl>
+        <span class="soon">Case study coming soon</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">03</span><h2>Credentials &amp; Education</h2></div>
+    <div class="cred-cols">
+      <div>
+        <h3>Verified credentials</h3>
+        <div class="cred"><div><strong>CompTIA Security+ ce (SY0-701)</strong><small>CompTIA</small></div><a class="verify" href="https://www.credly.com/badges/ce0408df-4e1c-4c99-8429-0b94db08e317/public_url" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>Applied AI for Digital Transformation</strong><small>MIT Professional Education · Oct 2026 · 64 hours</small></div><a class="verify" href="https://www.credential.net/6dddb708-dd69-4536-bfd1-ec5b4c42f065" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>Artificial Intelligence Fundamentals</strong><small>ISACA</small></div><a class="verify" href="https://www.credly.com/badges/e06b27f1-08c8-4c34-ba81-d53e170c6e48/linked_in_profile" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>AI &amp; Machine Learning for Cybersecurity</strong><small>University of West Florida · NCAE-C</small></div><a class="verify" href="https://api.badgr.io/public/assertions/o9ZRbz6tS7O78oK0BA6YVQ" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>EC-Council Generative AI for Cybersecurity</strong><small>University of West Florida · NCAE-C</small></div><a class="verify" href="https://api.badgr.io/public/assertions/o5iLlgJQTpOltJG88Vjspw" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>Digital Forensics Fundamental Skills</strong><small>Florida International University</small></div><a class="verify" href="https://www.credly.com/badges/fe5df7c6-5ef6-4f8e-b854-fac42822330b/linked_in_profile" target="_blank" rel="noopener">Verify ✓</a></div>
+        <div class="cred"><div><strong>ISC2 Certified in Cybersecurity (CC)</strong><small>ISC2</small></div></div>
+        <div class="cred"><div><strong>Qualys VMDR</strong><small>Qualys</small></div></div>
+        <div class="cred"><div><strong>Cybersecurity Analyst Apprenticeship</strong><small>RapidAscent · 800 hours</small></div></div>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <div class="cred"><div><strong>M.S., Cybersecurity Strategy &amp; Information Management</strong><small>The George Washington University</small></div></div>
+        <div class="cred"><div><strong>M.S., International Relations &amp; National Security Studies</strong><small>Naval Postgraduate School</small></div></div>
+        <div class="cred"><div><strong>M.S., Human Resource Management</strong><small>University of Oklahoma</small></div></div>
+        <h3 style="margin-top:34px">In progress</h3>
+        <div class="cred"><div><strong>Applied Agentic AI for Organizational Transformation</strong><small>MIT Professional Education</small></div><span class="date">2026</span></div>
+        <div class="cred"><div><strong>AI Cybersecurity &amp; Governance</strong><small>Columbia University</small></div><span class="date">Jan 2027</span></div>
+        <div class="cred"><div><strong>CISSP</strong><small>ISC2</small></div><span class="date">Exam Nov 2026</span></div>
+        <div class="cred"><div><strong>CRISC</strong><small>ISACA</small></div><span class="date">Exam Jan 2027</span></div>
+        <div class="cred"><div><strong>ISC2 AI Security</strong><small>ISC2</small></div><span class="date">Exam Apr 2027</span></div>
+        <div class="cred"><div><strong>CompTIA AI Essentials</strong><small>CompTIA</small></div><span class="date">In progress</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">04</span><h2>Experience</h2></div>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="when">2026 – Present</div>
+        <h3>AI Governance &amp; Cyber Risk Strategy Intern · Vanguard Rising (Waite SLTS USA)</h3>
+        <p>Developing GRC assessment methods aligned with NIST SP 800-53, NIST SP 800-171 and CMMC for national use across K–12 institutions, plus executive-ready implementation playbooks.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2024</div>
+        <h3>Cybersecurity Analyst Intern · RapidAscent</h3>
+        <p>800-hour apprenticeship covering GRC, threat hunting, threat intelligence, SIEM detection (Splunk) and forensic incident investigation, with Python automation.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2017 – 2022</div>
+        <h3>Regional Cyber Branch Chief · Defense Intelligence Agency</h3>
+        <p>First military officer selected to lead the Pan-American Regional Cyber/C4I Branch. Directed a 40-person multinational cyber branch across 5 countries and briefed the President, Secretary of Defense and Joint Chiefs of Staff.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2015 – 2016</div>
+        <h3>Foreign Military Sales Case Manager · Office of Security Cooperation-Iraq</h3>
+        <p>Founded the role and built a 13-case, $382M portfolio supporting Operation INHERENT RESOLVE. Coordinated the State Department, the Government of Iraq, USCENTCOM and CJTF-OIR.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2014 – 2017</div>
+        <h3>Political-Military Advisor · U.S. Army South / SOUTHCOM</h3>
+        <p>Led regional security cooperation strategy for Central America and the Caribbean, including the Central America Regional Leaders Conference with 7 partner nations.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2012 – 2013</div>
+        <h3>Senior Security Assistance Advisor · U.S. Embassy Iraq</h3>
+        <p>Managed a $520M security-assistance portfolio and advised embassy and military leaders on U.S.-Iraq defense strategy.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2011 – 2014</div>
+        <h3>Foreign Area Officer · Office of Defense Cooperation, U.S. Embassy Uruguay</h3>
+        <p>Advised the Defense Attaché, earned special recognition in SOUTHCOM's Inspector General inspection, and contributed to a $3.105M State Department peace operations grant to Uruguay.</p>
+      </div>
+      <div class="t-item">
+        <div class="when">2003 – 2011</div>
+        <h3>Personnel &amp; Operations Leadership · U.S. Army</h3>
+        <p>Personnel officer across five commands of up to 1,700+ people, raising evaluation timeliness from 65% to 95%. Led postal operations in Germany and at Kandahar Airfield, Afghanistan, serving 7,500+ people across 122 units.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:1.4rem;margin:30px 0 4px">Board &amp; community leadership</h3>
+    <div class="service">
+      <div class="card"><span class="tag done">Board</span><h3>Parent Representative, Fayette County Schools ECS Parent Advisory Council</h3><p>Represents families at two high schools and one middle school on the Exceptional Children's Services (ECS) Parent Advisory Council. The council brings families, teachers and ECS staff together to advise the district, share resources and help families advocate for students with exceptional needs.</p></div>
+      <div class="card"><span class="tag done">Board · 2024 – 2026</span><h3>Executive Board Secretary, WiCyS Georgia</h3><p>Ran board governance, records and executive communications for the Women in CyberSecurity Georgia affiliate, and supported statewide cyber workforce partnerships.</p></div>
+      <div class="card"><span class="tag done">Service</span><h3>Volunteer, Special Olympics</h3><p>Supporting athletes and events in the community.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">05</span><h2>Let's talk</h2></div>
+    <p>I'm open to Director, Senior Director and VP roles in AI governance and cyber risk, and to consulting conversations. The fastest way to reach me is email.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:tomeeka.l.sibley@icloud.com">tomeeka.l.sibley@icloud.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/tlsibley" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Tomeeka L. Sibley · Hosted on GitHub Pages</div></footer>
+
+</body>
+</html>

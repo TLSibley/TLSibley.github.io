@@ -17,7 +17,7 @@ This is my professional portfolio. The live site is **https://YOUR-USERNAME.gith
 
 ## Filling it in
 
-Projects marked "Case study coming soon" have no write-up yet. When one is ready, add a page to `projects/` and swap the "coming soon" label for a link.
+Projects marked "Case study coming soon" have a placeholder page in `projects/` (`ai-governance-assessment-framework.md` and `agentic-ai-project.md`). When a write-up is ready, replace the placeholder text and swap the "coming soon" label on its card for a link.
 
 | What | Where |
 |---|---|
